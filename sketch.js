@@ -196,8 +196,8 @@ function makeSureReady() {
       ) {
         const octo = new Octo(collectionData[i]);
         octo.setAttributes(collectionData[i].metadata.attributes);
-        const x = positions[i][0] + Math.floor(random(-1, 1));
-        const y = positions[i][1] + Math.floor(random(-4, 4));
+        const x = positions[numCounter][0] + Math.floor(random(-1, 1));
+        const y = positions[numCounter][1] + Math.floor(random(-4, 4));
         octo.setPosition(x, y);
         octo.direction = random(1) < 0.5 ? -1 : 1;
         octo.createOctoGraphics();
