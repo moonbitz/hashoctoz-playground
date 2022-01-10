@@ -165,6 +165,7 @@ Check out our twitter at https://twitter.com/moonbitzzz
   addRipple(rippleImg, 260);
   steamImg = loadImage(`./public/bg/steam.png`);
   fogImg = createGraphics(origWidth, origHeight);
+  fogImg.pixelDensity(1);
 }
 
 function setup() {
@@ -268,8 +269,8 @@ function draw() {
     octo.display(pg);
   }
 
-  addFog(fogImg, 0.01, frameCount / 100);
   pg.blendMode(SCREEN);
+  addFog(fogImg, 0.01, frameCount / 100);
   pg.image(fogImg, 0, 0);
 
   pg.blendMode(ADD);
