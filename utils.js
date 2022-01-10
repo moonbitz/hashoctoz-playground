@@ -59,8 +59,7 @@ function shuffle(a) {
   return a;
 }
 
-function addFog(scale = 1, speed = 1) {
-  const pg = createGraphics(origWidth, origHeight);
+function addFog(pg, scale = 1, speed = 1) {
   pg.background(
     160 + Math.sin(frameCount / 80) * 90,
     180 + Math.sin(frameCount / 60) * 80,

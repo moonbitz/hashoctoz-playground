@@ -72,6 +72,7 @@ let extraStarsImg; // generative stars
 let skyImg; // sky bg
 let rippleImg; // update at interval
 let steamImg;
+let fogImg;
 
 const origWidth = 200;
 const origHeight = 150;
@@ -163,6 +164,7 @@ Check out our twitter at https://twitter.com/moonbitzzz
   rippleImg = createGraphics(origWidth, origHeight);
   addRipple(rippleImg, 260);
   steamImg = loadImage(`./public/bg/steam.png`);
+  fogImg = createGraphics(origWidth, origHeight);
 }
 
 function setup() {
@@ -267,7 +269,7 @@ function draw() {
   }
 
   pg.blendMode(SCREEN);
-  pg.image(addFog(0.01, frameCount / 100), 0, 0);
+  pg.image(addFog(fogImg, 0.01, frameCount / 100), 0, 0);
 
   pg.blendMode(ADD);
   const sy1 = ((frameCount / 10) % 30) * -1;
