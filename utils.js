@@ -61,11 +61,11 @@ function shuffle(a) {
 
 function addFog(pg, scale = 1, speed = 1) {
   pg.clear();
-  pg.background(
-    160 + Math.sin(frameCount / 80) * 90,
-    180 + Math.sin(frameCount / 60) * 80,
-    200 + Math.sin(frameCount / 50) * 50
-  );
+  // pg.background(
+  //   160 + Math.sin(frameCount / 80) * 90,
+  //   180 + Math.sin(frameCount / 60) * 80,
+  //   200 + Math.sin(frameCount / 50) * 50
+  // );
   pg.loadPixels();
   for (let y = 0; y < pg.height; y++) {
     for (let x = 0; x < pg.width; x++) {
