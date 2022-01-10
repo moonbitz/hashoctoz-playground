@@ -162,6 +162,7 @@ Check out our twitter at https://twitter.com/moonbitzzz
   extraStarsImg = createGraphics(origWidth, origHeight);
   skyImg = loadImage(`./public/bg/sky.png`);
   rippleImg = createGraphics(origWidth, origHeight);
+  rippleImg.pixelDensity(1);
   addRipple(rippleImg, 260);
   steamImg = loadImage(`./public/bg/steam.png`);
   fogImg = createGraphics(origWidth, origHeight);

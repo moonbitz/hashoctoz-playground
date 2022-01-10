@@ -79,9 +79,7 @@ function addFog(pg, scale = 1, speed = 1) {
 }
 
 function addRipple(srcImg, num) {
-  // pg.background(0);
   srcImg.clear();
-
   const center = { x: 100, y: 93 };
   for (let i = 0; i < num; i++) {
     const x = Math.floor(center.x + Math.cos(i) * random(70)) + 0.5;
