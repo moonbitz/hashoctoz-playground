@@ -268,8 +268,9 @@ function draw() {
     octo.display(pg);
   }
 
+  addFog(fogImg, 0.01, frameCount / 100);
   pg.blendMode(SCREEN);
-  pg.image(addFog(fogImg, 0.01, frameCount / 100), 0, 0);
+  pg.image(fogImg, 0, 0);
 
   pg.blendMode(ADD);
   const sy1 = ((frameCount / 10) % 30) * -1;

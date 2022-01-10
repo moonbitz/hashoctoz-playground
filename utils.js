@@ -60,6 +60,7 @@ function shuffle(a) {
 }
 
 function addFog(pg, scale = 1, speed = 1) {
+  pg.clear();
   pg.background(
     160 + Math.sin(frameCount / 80) * 90,
     180 + Math.sin(frameCount / 60) * 80,
