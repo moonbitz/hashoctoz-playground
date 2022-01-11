@@ -159,7 +159,7 @@ Check out our twitter at https://twitter.com/moonbitzzz
   bgImg = loadImage(`./public/bg/bg.png`);
   fgImg = loadImage(`./public/bg/fg.png`);
   starsImg = loadImage(`./public/bg/stars.png`);
-  extraStarsImg = createGraphics(origWidth, origHeight);
+  // extraStarsImg = createGraphics(origWidth, origHeight);
   skyImg = loadImage(`./public/bg/sky.png`);
   rippleImg = createGraphics(origWidth, origHeight);
   rippleImg.pixelDensity(1);
@@ -199,6 +199,7 @@ function makeSureReady() {
         numCounter < numOctoz
       ) {
         const octo = new Octo(collectionData[i]);
+        octo.flipDirection();
         octo.setAttributes(collectionData[i].metadata.attributes);
         const x = positions[numCounter][0] + Math.floor(random(-1, 1));
         const y = positions[numCounter][1] + Math.floor(random(-4, 4));

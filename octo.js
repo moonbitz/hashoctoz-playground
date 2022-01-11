@@ -16,12 +16,12 @@ class Octo {
     this.y = 0;
     this.direction = 1;
 
-    const intvl = random(8000, 24000);
-    setInterval(() => {
-      this.direction *= -1;
-    }, intvl);
-
     this.setupDialogues();
+  }
+
+  flipDirection() {
+    this.direction *= -1;
+    setTimeout(this.flipDirection.bind(this), random(4000, 8000));
   }
 
   setAttributes(attr) {
@@ -71,6 +71,7 @@ class Octo {
 
   createOctoGraphics() {
     const pg = createGraphics(this.origWidth, this.origHeight);
+    pg.pixelDensity(1);
     pg.image(this.bodyFill, 0, 0);
     pg.image(this.body, 0, 0);
     pg.image(this.eyes, 0, 0);
@@ -112,6 +113,7 @@ class Octo {
   generateMaskImg(startY) {
     const y = startY + Math.floor(random(-2, 2));
     const pg = createGraphics(36, 36);
+    pg.pixelDensity(1);
     pg.fill(255);
     pg.rect(0, 0, pg.width, y);
     pg.fill(0, 0, 200, 40);
